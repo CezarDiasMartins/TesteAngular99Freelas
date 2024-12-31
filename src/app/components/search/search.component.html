@@ -1,0 +1,23 @@
+<div>
+  <label>{{ label }}</label>
+
+  <div>
+    <input
+      type="text"
+      [(ngModel)]="searchTerm"
+      (focus)="toggleList(true)" 
+      placeholder="{{ placeholder }}"
+      class="search-box"
+    />
+  
+    <i id="search" class="fas fa-search search-icon"></i>
+  </div>
+  
+  @if(listOpen) {
+    <ul>
+      @for(item of filteredItems; track $index) {
+        <li (click)="selectItem(item)">{{ item }}</li>
+      }
+    </ul>
+  }
+</div>

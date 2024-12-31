@@ -1,0 +1,24 @@
+<!-- Modal open button -->
+<button class="open" (click)="alterModal()">{{ modal }}</button>
+
+<!-- Modal -->
+@if(isVisible) {
+  <div class="modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">{{ title }}</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="alterModal()"></button>
+        </div>
+        <div class="modal-body">
+          <p>{{ description }}</p>
+          <ng-content></ng-content>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-cancel" data-bs-dismiss="modal" (click)="alterModal()">Cancel</button>
+          <button type="button" class="btn btn-add" (click)="alterModal()">Add link</button>
+        </div>
+      </div>
+    </div>
+  </div>
+}

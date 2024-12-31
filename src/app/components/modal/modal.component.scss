@@ -1,0 +1,54 @@
+.open {
+    border: none;
+    border-radius: 15px;
+    padding: 15px 20px;
+    background-color: #007bff;
+    color: white;
+    font-size: 20px;
+    transition: all 0.3s;
+}
+
+.open:hover {
+    background-color: transparent;
+    color: #007bff;
+    border: #007bff solid 1px;
+}
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(170, 170, 170);
+}
+
+.modal-dialog{
+    width: 700px;
+}
+
+.modal-header, .modal-footer {
+    border: none;
+}
+
+.btn-cancel {
+    background: transparent;
+    border: none;
+}
+
+.btn-cancel:hover {
+    background: transparent;
+    border: 1px solid black;
+    border-radius: 2px;
+}
+
+.btn-add {
+    background: transparent;
+    color: #6610f2;
+    border: 1px solid #6610f2;
+    border-radius: 2px;
+}
+
+.btn-add:hover {
+    background: #6610f2;
+    border: none;
+    color: white;
+}
